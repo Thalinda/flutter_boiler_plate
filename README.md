@@ -1,16 +1,14 @@
-# boiler_plate
+# Flutte Boiler plate
 
 A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## To Change boiller plate screen
+    > Change the spalsh/logo.png to what ever image that you need
+    Run `flutter clean`
+    Run `flutter pub get`
+    Run `flutter pub run flutter_native_splash:create`
+    > That's it splash screen will created with white background
+###### Splash Screen Customizations
+        > to change things inside splash screen user flutter_native_splash.yaml 
