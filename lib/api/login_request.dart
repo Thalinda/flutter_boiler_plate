@@ -31,9 +31,10 @@ Future<UserModel?> loginToApp({required LoginModel logininfo}) async {
 
     print('User created: ${response.data['data_set']}');
 
-    // retrievedUser =
-    //     UserModel(email: "Dummy", isMobile: true, userid: 1, token: "Dummy");
-    // await gf.saveUser(retrievedUser);
+    retrievedUser =
+        UserModel(email: "Dummy", isMobile: true, userid: 1, token: "Dummy");
+    await gf.saveUser(retrievedUser);
+    return retrievedUser;
   } catch (e) {
     print('Error creating user: $e');
   }

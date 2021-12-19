@@ -29,6 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
     });
     if (network != 0) {
       userid = await gf.getUserid();
+      print(userid);
       // ignore: unnecessary_null_comparison
       if (userid != "" && userid != null) {
         Get.offNamedUntil(Routes.home, (route) => false);
