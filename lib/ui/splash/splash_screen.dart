@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
     setState(() {
       network = netowrkbind.connectionType;
     });
-    if (network != 0) {
+    if (network == 0) {
       userid = await gf.getUserid();
       print(userid);
       // ignore: unnecessary_null_comparison
@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: network != 0
+      body: network == 0
           ? Column(
               children: [
                 Center(
