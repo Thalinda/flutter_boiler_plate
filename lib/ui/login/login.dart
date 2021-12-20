@@ -1,13 +1,13 @@
-import 'package:boiler_plate/constants/fontsize.dart';
 import 'package:boiler_plate/controller/authcontroller.dart';
 import 'package:boiler_plate/models/login.dart';
-import 'package:boiler_plate/utils/connectivity.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../widgets/textfiled.dart';
+import '../../constants/colors.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -82,21 +82,26 @@ class _LoginScreenState extends State<LoginScreen> {
                 password,
                 InputDecoration(
                     prefixIcon: const Icon(Icons.password),
-                    border: const OutlineInputBorder(),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                            color: AppColors.primarycolor,
+                            style: BorderStyle.solid)),
                     errorBorder: const OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.red),
                     ),
                     errorText: ispasswordValide == false
                         ? "passwordnote_valide".tr
                         : null,
-                    labelText: 'Password',
+                    labelText: 'password'.tr,
                     hintText: 'password'.tr)),
             // ignore: deprecated_member_use
             FlatButton(
               onPressed: () {},
-              child: const Text(
-                'Forgot Password',
-                style: TextStyle(color: Colors.blue, fontSize: 15),
+              child: Text(
+                'forgot_password'.tr,
+                style: TextStyle(
+                    color: AppColors.primarycolor,
+                    fontSize: ScreenUtil().setSp(14)),
               ),
             ),
             Container(
@@ -109,14 +114,16 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 50,
                           width: 250,
                           child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                primary: AppColors.primarycolor),
                             onPressed: () {
                               loginAction();
                             },
-                            child: const Text(
-                              'Login',
+                            child: Text(
+                              'login'.tr,
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 25,
+                                fontSize: ScreenUtil().setSp(24),
                               ),
                             ),
                           ),
@@ -126,7 +133,10 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height: 130,
             ),
-            // const Text('New User? Create Account')
+            // Text(
+            //   'New User? Create Account',
+            //   style: TextStyle(fontSize: ScreenUtil().setSp(11)),
+            // )
           ],
         ),
       ),
