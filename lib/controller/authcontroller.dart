@@ -9,12 +9,15 @@ class LoginProvider extends GetxController {
   String? email;
   String? username;
   RxBool isLoading = RxBool(false);
+  RxBool validatingverificationCode = RxBool(false);
+  RxBool ispasswordchanged = RxBool(false);
 
   Future loginToAppProvider(
     LoginModel loginModel,
   ) async {
     isLoading.value = true;
     UserModel? userModel = await loginToApp(logininfo: loginModel);
+
     isLoading.value = false;
     print(userModel!.toJson());
   }

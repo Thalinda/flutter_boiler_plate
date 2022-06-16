@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
         designSize: const Size(375, 812),
-        builder: () => GetMaterialApp(
+        builder: (_, _a) => GetMaterialApp(
               initialBinding: NetworkBinding(),
               translations: AppTranslation(),
               locale: Get.deviceLocale, // const Locale('es', 'ES'),

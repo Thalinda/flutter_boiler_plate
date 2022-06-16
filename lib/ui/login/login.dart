@@ -3,7 +3,7 @@ import 'package:boiler_plate/models/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import '../../widgets/textfiled.dart';
+import '../../widgets/textfiled1.dart';
 import '../../constants/colors.dart';
 
 class LoginScreen extends StatefulWidget {

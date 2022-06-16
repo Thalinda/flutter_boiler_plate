@@ -9,7 +9,7 @@ class Routes {
   static const String login = '/';
   static const String home = '/home';
   static const String splash = '/splash';
-  static const String initialRoute = splash;
+  static const String initialRoute = home;
   static final routes = [
     GetPage(name: login, page: () => LoginScreen()),
     GetPage(name: splash, page: () => const SplashScreen()),
